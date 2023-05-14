@@ -9,7 +9,6 @@ let checkAuth = async (req,res,next) => {
        try {
         //get token from header
          token = authorization.split(' ')[1]
-         console.log(token)
         
         //verify token and get userID
         const {userID} = jwt.verify(token, process.env.JWT_SECRET_KEY)
